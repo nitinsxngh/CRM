@@ -20,10 +20,11 @@ const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:5000',
   'http://ec2-51-20-5-77.eu-north-1.compute.amazonaws.com',
-  'http://crm.gomaterial.in',
-  'http://gomaterial.in',
-  'https://gomaterial.in'
+  'http://*.gomaterial.in',
+  'https://crm.gomaterial.in',
+  'https://*.gomaterial.in'
 ];
+
 
 const corsOptions = {
   origin: (origin, callback) => {
