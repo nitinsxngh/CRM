@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.formContainer {
+ height: auto;
+ width: 60%;
+ background-color: #fff;
+ padding: 40px;
+ margin: auto;
+}
+
+.input-group {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.inputGroup {
+  width: 260px;
+}
+
+.input-group:last-child {
+  margin-right: 0;
+}
+input[type="text"], select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.bottom {
+  height: 120px;
+  width: 100%;
+  text-align: center;
+}
+
+.saveBtn {
+  padding: 10px 80px;
+  margin-top: 40px;
+}
+
+  /* Responsive layout */
+  @media screen and (max-width: 768px) {
+    .container {
+      display: block;
+    }
+  }

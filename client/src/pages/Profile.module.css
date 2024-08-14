@@ -1,0 +1,8 @@
+.profile {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  height: 832px;
+  overflow: hidden;
+  letter-spacing: normal;
+}

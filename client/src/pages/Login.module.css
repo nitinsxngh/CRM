@@ -1,0 +1,128 @@
+.mainContainer {
+  display: flex;
+  height: 100vh;
+}
+
+button {
+
+}
+
+.passwordContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password {
+  width: 100%;
+  padding-right: 30px; /* Add padding to avoid text overlap with the icon */
+}
+
+.showHideIcon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.leftContainer {
+  flex: 1;
+  background-color: #333;
+  color: white;
+  padding: 40px;
+}
+
+.rightContainer {
+  flex: 2;
+  background-color: #fff;
+  padding: 40px;
+  padding-top: 150px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 50%;
+}
+
+.subtitle {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.loginForm {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+}
+
+.loginForm h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+input[type="password"] {
+  margin-right: 0px!important;
+}
+
+.error {
+  margin: -5px auto 20px auto;
+  font-size: 12.5px;
+  color: rgb(209, 38, 38);
+  animation: slideUp 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.signUp {
+  margin-bottom: 20px;
+}
+
+.signUp a {
+  color: #121212;
+}
+
+.customFont {
+  font-family: 'freehand', sans-serif; /* Replace 'YourCustomFont' with the actual font name */
+}
+
+.mainContainer button {
+  width: 360px;
+  padding: 10px;
+  background-color: #121212;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.forgotPassword {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+/* Input error styling */
+.inputError {
+  border: 1px solid rgb(209, 38, 38);
+}
+
+/* Responsive layout */
+@media screen and (max-width: 768px) {
+  .mainContainer {
+    flex-direction: column;
+  }
+
+  .leftContainer, .rightContainer {
+    flex: auto;
+    width: auto;
+  }
+}

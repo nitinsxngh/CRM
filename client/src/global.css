@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
+
+body {
+  margin: 0;
+  line-height: normal;
+  background-color: #F3F2F7;
+  font-family: var(--font-inter), sans-serif;
+}
+
+:root {
+  /* fonts */
+  --font-inter: Inter;
+
+  /* font sizes */
+  --font-size-xs: 12px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-gainsboro: #dcdcdc;
+  --color-black: #000;
+
+  /* Gaps */
+  --gap-6xl-3: 25.3px;
+
+  /* Paddings */
+  --padding-smi: 13px;
+  --padding-lgi: 19px;
+  --padding-xl: 20px;
+}
+
+/* Global styles for textarea */
+textarea {
+  font-family: var(--font-inter), sans-serif;
+  font-size: var(--font-size-xs);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  padding: var(--padding-smi);
+  border: 1px solid var(--color-gainsboro);
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: var(--gap-6xl-3);
+  outline: none;
+}
+
+textarea:focus {
+  border-color: var(--color-black);
+}
+
+/* Global styles for file input */
+input[type="file"] {
+  font-family: var(--font-inter), sans-serif;
+  font-size: var(--font-size-xs);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  padding: var(--padding-smi);
+  border: 1px solid var(--color-gainsboro);
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: var(--gap-6xl-3);
+  outline: none;
+}
+
+input[type="file"]::file-selector-button {
+  font-family: var(--font-inter), sans-serif;
+  font-size: var(--font-size-xs);
+  background-color: var(--color-gainsboro);
+  color: var(--color-black);
+  padding: var(--padding-smi);
+  border: 1px solid var(--color-gainsboro);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+input[type="file"]::file-selector-button:focus {
+  border-color: var(--color-black);
+}

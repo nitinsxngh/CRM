@@ -1,0 +1,486 @@
+.tableContainer {
+  width: 80%;
+  float: right;
+  right: 50px;
+  overflow-x: auto;
+  position: absolute;
+  top: 65px;
+}
+
+.error {
+  font-size: 12.5px;
+  color: rgb(209, 38, 38);
+  text-align: left;
+  animation: slideUp 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.errorInput {
+  border: 1px solid red;
+}
+
+.formError {
+  color: red;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* BoqTable.module.css */
+.highPriority {
+  background-color: #dcffe8; /* Light red for high priority */
+}
+
+.mediumPriority {
+  background-color: #fff0b3; /* Light yellow for medium priority */
+}
+
+.lowPriority {
+  background-color: #e5d5d5; /* Light green for low priority */
+}
+
+.activeStatus {
+  border-left: 5px solid #28a745; /* Green border for active status */
+}
+
+.inactiveStatus {
+  border-left: 5px solid #dc3545; /* Red border for inactive status */
+}
+
+.boqSentStatus {
+  border-left: 5px solid #ffc107; /* Yellow border for Boq Sent status */
+}
+
+.dealClosedStatus {
+  border-left: 5px solid #17a2b8; /* Blue border for Deal Closed status */
+}
+
+.meetingDoneStatus {
+  border-left: 5px solid #6c757d; /* Grey border for Meeting Done status */
+}
+
+.errorInput {
+  border: 1px solid #dc3545; /* Red border for error input */
+}
+
+.error {
+  color: #dc3545; /* Red color for error text */
+}
+
+
+table {
+  width: 100%;
+  margin: 80px auto;
+  border-collapse: collapse;
+}
+
+thead {
+  border-radius: 20px;
+}
+
+th, td {
+  padding: 20px;
+  margin-bottom: 120px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+td {
+  margin-bottom: 40px;
+}
+
+th {
+  background-color: #1F5E6C;
+  color: #fff;
+  padding: 20px;
+}
+
+tr {
+  background-color: #fff;
+  margin: 10px;
+  margin-bottom: 10px;
+  font-size: 13.5px;
+}
+
+.active {
+  color: green;
+}
+
+.inactive {
+  color: red;
+}
+
+.layoutBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 78.5%;
+  position: fixed;
+  margin: -10px auto;
+  padding: 10px 0px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  width: 400px;
+}
+
+.searchBar input[type="text"] {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+input[type="password"] {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 90%;
+}
+
+input[type="number"] {
+  padding: 10px;
+  margin: 10px 10px 0px 0px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 96%;
+}
+
+.searchBar .searchButton {
+  padding: 10px 15px;
+  margin-top: 0px;
+  background-color: #1f5e6d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.addCustomerButton {
+  padding: 10px 20px;
+  margin-top: 0px;
+  background-color: #1f5e6d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px; /* Adjust the width as needed */
+  background-color: white;
+  padding: 20px 60px;
+  outline: none;
+  transition: transform 0.3s ease; /* Smooth transition for modal */
+  border-left: 1px solid #f3f3f3;
+  display: flex;
+  flex-direction: column; /* Ensure the layout is column-based */
+}
+
+.fullscreenModal {
+  width: 82%;
+  height: 100%;
+  padding: 20px;
+}
+
+.modalOverlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease; /* Use transition for the fade effect */
+}
+
+.modal {
+  animation: slideIn 0.3s forwards; /* Use animation for the slide effect */
+  padding-bottom: 100px;
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+.modalContentRight {
+  position: fixed;
+  right: 0;
+  background-color: white;
+  padding: 40px;
+  height: 100vh;
+  width: 380px;
+  max-width: calc(100% - 40px); /* Ensure modal does not exceed screen width */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Smooth transition for modal content */
+  transform: translateX(100%); /* Start position */
+}
+
+.modalContent {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-top: 10px;
+  padding-bottom: 20px; /* Adjust padding to accommodate the fixed bottom button */
+}
+
+form {
+  font-size: 14px;
+}
+
+.formGroupTop {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.backIcon {
+  margin: 10px 10px 18px 10px; /* Adjust margin as needed */
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.addCustomerHeading {
+  flex-grow: 1; /* Allows the heading to take up remaining space */
+  text-align: center;
+}
+
+.formGroupBottom {
+  height: 50px;
+  width: 100%; /* Make the button container full width */
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  background-color: #fff;
+  padding: 10px 0; /* Adjust padding for better spacing */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+}
+
+.userImage {
+  text-align: center;
+}
+
+.userProfile {
+  height: 100px;
+  width: 100px;
+  padding: 5px;
+  border-radius: 50%;
+  border: 2px solid grey;
+}
+
+.modalContent h2 {
+  text-align: center;
+  display: block;
+  font-size: 20px;
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 50px;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #1f5e6d;
+  color: white;
+  border: none;
+}
+
+.addTransportButton {
+  border-radius: 4px;
+}
+
+label {
+  color: grey;
+}
+
+.actionIcon {
+  cursor: pointer;
+  margin: 0 5px;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.actionIcon:hover {
+  color: #0056b3;
+}
+
+.progressBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 2px solid #ccc;
+  cursor: pointer;
+}
+
+.activeStep {
+  border-bottom: 2px solid #1f5e6d;
+  font-weight: bold;
+}
+
+.type {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.typeBtn {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: grey;
+  border: 1px solid grey;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.typeBtn:first-child {
+  margin-left: 0px !important;
+}
+
+.typeBtn:hover {
+  background-color: #1F5E6C;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.singleColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.fullWidth {
+  grid-column: span 2;
+}
+
+.specificationRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.textarea {
+  width: 100%;
+  height: 120px;
+}
+
+#terms {
+  width: 100%;
+  height: 120px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+  width: 100% !important;
+  padding: 10px !important;
+  margin-top: 5px !important;
+  margin-bottom: 15px !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  box-sizing: border-box !important;
+  font-size: 14px !important;
+}
+
+.reviewContentMain {
+  display: flex;
+}
+
+.topLeftDataPreview {
+  height: 500px;
+  left: 0;
+  background-color: #f6f4ff;
+}
+
+.topRightDataPreview {
+  height: 500px;
+  width: 70%;
+  padding: 10px;
+  right: 0;
+  background-color: #ffffff;
+}
+.reviewContentMainPoster {
+  height: 400px;
+  width: 100%;
+  background-color: blue;
+}
+
+.reviewContentMainPoster {
+  background: url('../assets/poster.jpeg') no-repeat;
+  background-size: 100%;
+}
+
+.reviewContent th {
+  background-color: #f6f4ff !important;
+  color: #000;
+}
+
+.reviewContent h1, h3, p {
+  color: #393939;
+}
+
+/* Add these styles to BoqTable.module.css */
+
+.typeBtn {
+  margin-right: 10px;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.selectedCategory {
+  background-color: #1f5e6d;
+  color: white;
+  border-color: #1f5e6d;
+}

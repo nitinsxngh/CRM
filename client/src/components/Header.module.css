@@ -1,0 +1,241 @@
+/* Header.module.css */
+
+body {
+  font-family: var(--font-inter);
+}
+
+.header {
+  height: 58px;
+  width: 100%;
+  background-color: #fff;
+  top: 0;
+  position: fixed;
+  z-index: 99;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between; /* Align items in header */
+  align-items: center; /* Vertically center items in header */
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  margin-right: auto; /* Aligns headerContainerData to the left */
+}
+
+.headerContainerData {
+  height: 58px;
+  width: 265px;
+  margin-left: auto; /* Aligns headerContainerData to the right */
+  position: absolute;
+  right: 0;
+}
+
+.logo {
+  height: 58px;
+  width: 240px;
+  position: absolute;
+  left: 20px;
+}
+
+.logo h4 {
+  margin-left: 15px;
+}
+
+.logoImg {
+  height: 58px;
+}
+
+.notification {
+  height: 40px;
+  width: 40px;
+  background-color: #ffbdbd;
+  opacity: 0.7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px; /* Adjust as needed */
+}
+
+.notification-icon {
+  color: #ef0000; /* adjust color as needed */
+}
+
+.profile {
+  border-radius: 50%;
+  background-color: #b7b7b7;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px; /* Adjust as needed */
+}
+
+.profile-icon {
+  color: #fff; /* adjust color as needed */
+}
+
+.profileName {
+  margin-right: 20px; /* Adjust as needed */
+  font-size: 12px;
+}
+
+
+
+/* Add these styles to CustomerTable.module.css */
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 400px; /* Adjust the width as needed */
+  background-color: white;
+  outline: none;
+  transition: transform 0.3s ease; /* Smooth transition for modal */
+  border-left: 1px solid #f3f3f3
+}
+
+.form {
+  padding: 20px 60px;
+}
+
+.modalContentHeader {
+  height: auto;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.modalContentHeader h2{
+ margin: 0;
+ padding: 30px;
+ font-size: 16px;
+ text-align: center;
+}
+
+.modalContentHeaderInfo {
+  height: 40px;
+  width: 100%;
+  display: flex;
+}
+
+.modalContentHeaderInfoBtn {
+  height: 40px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 250ms ease-in-out;
+}
+
+.modalContentHeaderInfoBtn:hover {
+  border-bottom: 2px solid grey;
+}
+
+.modalOverlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease; /* Use transition for the fade effect */
+}
+
+.modal {
+  animation: slideIn 0.3s forwards; /* Use animation for the slide effect */
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+
+.modalContentRight {
+  position: fixed;
+  right: 0;
+  background-color: white;
+  padding: 40px;
+  height: 100vh;
+  width: 380px;
+  max-width: calc(100% - 40px); /* Ensure modal does not exceed screen width */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Smooth transition for modal content */
+  transform: translateX(100%); /* Start position */
+}
+
+.modalContent {
+  padding-top: 0px;
+}
+
+.userImage {
+  height: 150px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userProfile {
+ height: 100px;
+ width: 100px;
+ padding: 5px;
+ border-radius: 50%;
+ border: 2px solid grey;
+}
+
+.modalContent h2 {
+  text-align: center;
+}
+
+.modalContentBottom {
+  text-align: center;
+}
+
+.modalContentBottom button {
+  padding: 12.5px 60px;
+  border-radius: 30px;
+}
+
+select {
+  color: grey;
+}
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+  margin: 10px;
+  background-color: #1f5e6d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+label {
+  color: grey;
+}
+
+table {
+  margin: auto;
+  width: 94%;
+}
